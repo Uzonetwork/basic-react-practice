@@ -1,20 +1,23 @@
-# Basic React JS Practice
+# Advanced Frontend Development Practice
 
-## Description
-This project presents my study and practice of **Basic React JS** concepts
-as outlined in S/N 3 of the Advanced Frontend curriculum.
+This repository contains progressive weekly deliverables for the Advanced Frontend curriculum.
 
-## Concepts Practiced
-- JSX
-- Functional Components
-- Props
-- State (useState)
-- Event Handling
-- Rendering lists in React
+---
 
-## Implementation Summary
-I built a simple React application that renders a list of products using
-components and props, and manages application data using React state.
+## 🌍 Live Demo
+https://uzonetwork.github.io/basic-react-practice
 
-## Repository Link
-https://github.com/Uzonetwork/basic-react-practice
+---
+
+## 📂 Project Structure
+
+- `/week3` → Basic React concepts (JSX, Components, Props, State)
+- `/week4` → RESTful API integration (GET & POST)
+
+---
+
+## 🛠 Technologies Used
+- React (Create React App)
+- JavaScript (ES6)
+- Fetch API
+- Git & GitHub Pages
