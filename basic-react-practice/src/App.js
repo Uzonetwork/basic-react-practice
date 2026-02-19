@@ -1,49 +1,42 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import useProducts from "./hooks/useProducts";
 
 function App() {
-  const [posts, setPosts] = useState([]);
+  const { products, loading } = useProducts();
+  const [search, setSearch] = useState("");
+  const inputRef = useRef(null);
 
+  // Auto-focus input when page loads
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts?_limit=5")
-      .then((response) => response.json())
-      .then((data) => setPosts(data))
-      .catch((error) => console.error("Error fetching data:", error));
+    inputRef.current.focus();
   }, []);
 
-  const createPost = () => {
-  fetch("https://jsonplaceholder.typicode.com/posts", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      title: "New Post from React",
-      body: "This post was created using a POST request.",
-      userId: 1,
-    }),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("Created Post:", data);
-      alert("Post created successfully! Check console.");
-    })
-    .catch((error) => console.error("Error creating post:", error));
-};
+  const filteredProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <div style={{ padding: "20px" }}>
-      <h1>REST API Practice - Week 4</h1>
-      <button onClick={createPost} style={{ marginBottom: "20px" }}>
-  Create New Post (POST)
-</button>
+      <h1>Week 5 – React Hooks Practice</h1>
 
-      {posts.map((post) => (
-        <div key={post.id} style={{ marginBottom: "20px" }}>
-          <h3>{post.title}</h3>
-          <p>{post.body}</p>
-          <hr />
-        </div>
-      ))}
+      <input
+        ref={inputRef}
+        type="text"
+        placeholder="Search products..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        style={{ padding: "8px", width: "300px", marginBottom: "20px" }}
+      />
+
+      {loading ? (
+        <p>Loading products...</p>
+      ) : (
+        filteredProducts.map((product) => (
+          <div key={product.id} style={{ marginBottom: "10px" }}>
+            <strong>{product.title}</strong> - ${product.price}
+          </div>
+        ))
+      )}
     </div>
   );
 }
