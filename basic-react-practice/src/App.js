@@ -2,13 +2,14 @@ import React, { useState, useRef, useEffect } from "react";
 import useProducts from "./hooks/useProducts";
 
 function App() {
-  const { products, loading } = useProducts();
+  const { products, loading, error } = useProducts();
   const [search, setSearch] = useState("");
   const inputRef = useRef(null);
 
-  // Auto-focus input when page loads
   useEffect(() => {
-    inputRef.current.focus();
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
   }, []);
 
   const filteredProducts = products.filter((product) =>
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <div style={{ padding: "20px" }}>
-      <h1>Week 5 – React Hooks Practice</h1>
+      <h1>Week 6 – Async React (Async/Await)</h1>
 
       <input
         ref={inputRef}
@@ -28,15 +29,17 @@ function App() {
         style={{ padding: "8px", width: "300px", marginBottom: "20px" }}
       />
 
-      {loading ? (
-        <p>Loading products...</p>
-      ) : (
+      {loading && <p>Loading products...</p>}
+
+      {error && <p style={{ color: "red" }}>Error: {error}</p>}
+
+      {!loading &&
+        !error &&
         filteredProducts.map((product) => (
           <div key={product.id} style={{ marginBottom: "10px" }}>
             <strong>{product.title}</strong> - ${product.price}
           </div>
-        ))
-      )}
+        ))}
     </div>
   );
 }
