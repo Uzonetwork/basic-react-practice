@@ -15,7 +15,9 @@ Each week builds on the previous one, demonstrating continuous growth in React c
 ## 📂 Weekly Breakdown
 
 ### 📘 Week 3 – Basic React JS
+
 **Focus Areas:**
+
 - JSX
 - Functional Components
 - Props
@@ -29,7 +31,9 @@ Built foundational React components and understood how React manages UI updates.
 ---
 
 ### 🌐 Week 4 – RESTful API Integration (GET & POST)
+
 **Focus Areas:**
+
 - Fetch API
 - GET requests
 - POST requests
@@ -42,7 +46,9 @@ Integrated external API (DummyJSON) into a React application and handled HTTP re
 ---
 
 ### ⚛️ Week 5 – React Hooks
+
 **Focus Areas:**
+
 - useState
 - useEffect
 - useRef
@@ -55,7 +61,9 @@ Refactored the application using modern React Hooks and created a reusable custo
 ---
 
 ### ⏳ Week 6 – Async React (JSON, Promises, Async/Await)
+
 **Focus Areas:**
+
 - Understanding Promises
 - Async/Await syntax
 - JSON parsing
@@ -67,6 +75,19 @@ Refactored the application using modern React Hooks and created a reusable custo
 Upgraded API logic from Promise chaining (`.then()`) to `async/await` with structured error handling and improved application reliability.
 
 ---
+
+### 🌎 Week 7 – React Context API
+
+**Focus Areas:**
+
+- React Context
+- Context Provider
+- useContext Hook
+- Global State Management
+
+**Outcome:**
+
+Refactored the application to manage product data globally using React Context, eliminating prop drilling and improving code architecture.
 
 ## 🛠 Technologies Used
 
