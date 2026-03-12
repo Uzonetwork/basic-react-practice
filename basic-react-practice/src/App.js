@@ -1,26 +1,29 @@
-import React, { useContext } from "react";
-import { ProductContext } from "./context/ProductContext";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
-
-  const { products, loading } = useContext(ProductContext);
-
-  if (loading) {
-    return <h2>Loading products...</h2>;
-  }
-
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Product List</h1>
+    <Router>
 
-      {products.map((product) => (
-        <div key={product.id} style={{ marginBottom: "20px" }}>
-          <h3>{product.title}</h3>
-          <p>{product.description}</p>
-          <strong>${product.price}</strong>
-        </div>
-      ))}
-    </div>
+      <nav style={{ padding: "20px", borderBottom: "1px solid gray" }}>
+        <Link to="/" style={{ marginRight: "20px" }}>Home</Link>
+        <Link to="/products">Products</Link>
+      </nav>
+
+      <Routes>
+
+        <Route path="/" element={<Home />} />
+
+        <Route path="/products" element={<Products />} />
+
+        <Route path="/product/:id" element={<ProductDetails />} />
+
+      </Routes>
+
+    </Router>
   );
 }
 
