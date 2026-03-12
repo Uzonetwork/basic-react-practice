@@ -89,6 +89,27 @@ Upgraded API logic from Promise chaining (`.then()`) to `async/await` with struc
 
 Refactored the application to manage product data globally using React Context, eliminating prop drilling and improving code architecture.
 
+## Week 8 – React Router
+
+### Focus Areas
+
+- React Router DOM
+- Multi-page navigation
+- Dynamic routes
+- URL parameters
+
+### Features Implemented
+
+- Home page
+- Products page
+- Product details page
+- Navigation menu
+- Dynamic product routing using `useParams`
+
+### Outcome
+
+The application was upgraded from a single-page layout to a multi-page React application using React Router. Users can now navigate between different pages and view individual product details.
+
 ## 🛠 Technologies Used
 
 - React (Create React App)
