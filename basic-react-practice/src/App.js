@@ -8,10 +8,16 @@ function App() {
   return (
     <Router>
 
-      <nav style={{ padding: "20px", borderBottom: "1px solid gray" }}>
-        <Link to="/" style={{ marginRight: "20px" }}>Home</Link>
-        <Link to="/products">Products</Link>
-      </nav>
+      <nav style={{
+  padding: "15px 20px",
+  borderBottom: "1px solid #ddd",
+  display: "flex",
+  gap: "20px",
+  fontWeight: "bold"
+}}>
+  <Link to="/">Home</Link>
+  <Link to="/products">Products</Link>
+</nav>
 
       <Routes>
 

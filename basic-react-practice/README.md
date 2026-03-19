@@ -110,6 +110,17 @@ Refactored the application to manage product data globally using React Context, 
 
 The application was upgraded from a single-page layout to a multi-page React application using React Router. Users can now navigate between different pages and view individual product details.
 
+## Week 9 – UI Enhancement
+
+### Focus Areas
+- CSS Grid
+- Product cards
+- Image rendering
+- Layout design
+
+### Outcome
+Improved the UI by introducing product cards, images, and a responsive grid layout to enhance user experience.
+
 ## 🛠 Technologies Used
 
 - React (Create React App)
