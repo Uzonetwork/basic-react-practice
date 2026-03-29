@@ -113,13 +113,27 @@ The application was upgraded from a single-page layout to a multi-page React app
 ## Week 9 – UI Enhancement
 
 ### Focus Areas
+
 - CSS Grid
 - Product cards
 - Image rendering
 - Layout design
 
 ### Outcome
+
 Improved the UI by introducing product cards, images, and a responsive grid layout to enhance user experience.
+
+## Week 10 – User Interaction
+
+### Focus Areas
+
+- Search functionality
+- Filtering logic
+- Dynamic rendering
+
+### Outcome
+
+Implemented real-time search and filtering to enhance user interaction and usability of the application.
 
 ## 🛠 Technologies Used
 
