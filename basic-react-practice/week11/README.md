@@ -14,13 +14,13 @@ function App() {
   return (
     <Router>
 
-      {/* 🔥 Week 11 Display */}
+      {/* Week 11 Display */}
       <div style={{ padding: "10px" }}>
         <h2>Week 11 Algorithms Output</h2>
         <p>Check console for results</p>
       </div>
 
-      {/* 🔗 Navigation */}
+      {/* Navigation */}
       <nav style={{
         padding: "15px 20px",
         borderBottom: "1px solid #ddd",
@@ -32,7 +32,7 @@ function App() {
         <Link to="/products">Products</Link>
       </nav>
 
-      {/* 📍 Routes */}
+      {/* Routes */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />

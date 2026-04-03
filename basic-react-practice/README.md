@@ -135,6 +135,16 @@ Improved the UI by introducing product cards, images, and a responsive grid layo
 
 Implemented real-time search and filtering to enhance user interaction and usability of the application.
 
+## Week 11 – Algorithms
+
+### Focus Areas
+- Searching algorithms
+- Sorting algorithms
+- Data structures
+
+### Outcome
+Implemented basic algorithms including linear search and bubble sort, and practiced array manipulation.
+
 ## 🛠 Technologies Used
 
 - React (Create React App)
